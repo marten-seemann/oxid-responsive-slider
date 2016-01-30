@@ -1,0 +1,22 @@
+{
+  "name": "responsive_slider",
+  "authors": [
+    "Marten Seemann"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "",
+  "homepage": "www.oxid-responsive.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jssor-slider": "jssor#~20.0.0"
+  }
+}
