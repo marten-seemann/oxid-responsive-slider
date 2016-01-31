@@ -27,7 +27,15 @@
 
   [{capture assign="pageScript"}]
     jQuery(document).ready(function ($) {
-      var options = { $AutoPlay: true };
+      var options = {
+        $AutoPlay: [{$oView->getSliderSetting("autostart")}],
+        $AutoPlaySteps: [{if $oView->getSliderSetting("direction")=="forward"}]1[{else}]-1[{/if}],
+        $SlideDuration: [{$oView->getSliderSetting("duration")}],
+        $PlayOrientation: [{if $oView->getSliderSetting("direction")=="horizontal"}]1[{else}]2[{/if}],
+        $Idle: [{$oView->getSliderSetting("idle")}],
+        $LazyLoading: 1,
+        }
+      };
       var jssor_slider = new $JssorSlider$('slider_container', options);
 
       //responsive code begin

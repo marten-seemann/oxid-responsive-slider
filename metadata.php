@@ -28,6 +28,11 @@ $aModule = array(
         'oxactions' => 'responsive_slider/models/oxactions_ext',
     ),
     'settings'     => array(
+      array('group' => 'slider_display', 'name' => 'slider_idle', 'type' => 'str',  'value' => '4000', 'position' => 11),
+      array('group' => 'slider_display', 'name' => 'slider_duration', 'type' => 'str',  'value' => '500', 'position' => 12),
+      array('group' => 'slider_display', 'name' => 'slider_autostart', 'type' => 'bool',  'value' => true, 'position' => 30),
+      array('group' => 'slider_display', 'name' => 'slider_direction', 'type' => 'select', 'constrains' =>'forward|backward', 'value' => 'right', 'position' => 31),
+      array('group' => 'slider_display', 'name' => 'slider_orientation', 'type' => 'select', 'constrains' =>'horizontal|vertical', 'value' => 'horizontal', 'position' => 32),
     ),
     'templates'    => array(
         'slider.tpl' => 'responsive_slider/views/blocks/slider.tpl',
