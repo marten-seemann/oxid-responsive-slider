@@ -19,7 +19,19 @@
         [{assign var=sBannerPictureUrl value=$oBanner->getBannerPictureUrl() }]
         [{assign var=sBannerLink value=$oBanner->getBannerLink() }]
         [{if $sBannerPictureUrl}]
-          <div><img data-u="image" alt="" src="[{$sBannerPictureUrl}]"/></div>
+          <div>
+            <img data-u="image" alt="" data-src2="[{$sBannerPictureUrl}]"/>
+            [{if $oArticle}]
+              <h6 style="font-size: 18px; position: absolute; top: 9px; left: 50px; margin: 0; font-weight: 400; box-shadow: 0px 2px 8px -2px black; padding: 5px 20px 5px 20px; color: #ffffff; background:#000000; border-radius:5px; white-space: nowrap;">
+                [{if $sBannerLink }]<a href="[{ $sBannerLink }]" style="text-shadow: 0px 0px 10px white; font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif; color: white; ">[{/if}]
+                [{ $oArticle->oxarticles__oxtitle->value }]
+                [{if $sBannerLink }]</a>[{/if}]
+              </h6>
+              <div style="font-size: 13px; position: absolute; top: 36px; left: 75px; font-weight: 400; box-shadow: 0px 2px 8px -2px black; padding: 2px 13px 2px 13px; color: #ffffff; background: #ff7700; border-radius: 5px; white-space: nowrap;">
+                [{ $oArticle->getFPrice() }] [{ $currency->sign}]
+              </div>
+            [{/if}]
+          </div>
         [{/if}]
       [{/foreach}]
     </div>
