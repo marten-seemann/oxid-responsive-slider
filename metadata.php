@@ -33,6 +33,10 @@ $aModule = array(
       array('group' => 'slider_display', 'name' => 'slider_autostart', 'type' => 'bool',  'value' => true, 'position' => 30),
       array('group' => 'slider_display', 'name' => 'slider_direction', 'type' => 'select', 'constrains' =>'forward|backward', 'value' => 'right', 'position' => 31),
       array('group' => 'slider_display', 'name' => 'slider_orientation', 'type' => 'select', 'constrains' =>'horizontal|vertical', 'value' => 'horizontal', 'position' => 32),
+      array('group' => 'slider_navigation', 'name' => 'slider_show_arrows', 'type' => 'bool', 'value' => true, 'position' => 101),
+      array('group' => 'slider_navigation', 'name' => 'slider_arrow_type', 'type' => 'str', 'value' => '2', 'position' => 102),
+      array('group' => 'slider_navigation', 'name' => 'slider_show_bullets', 'type' => 'bool', 'value' => true, 'position' => 111),
+      array('group' => 'slider_navigation', 'name' => 'slider_bullet_type', 'type' => 'str', 'value' => '16', 'position' => 112),
     ),
     'templates'    => array(
         'slider.tpl' => 'responsive_slider/views/blocks/slider.tpl',

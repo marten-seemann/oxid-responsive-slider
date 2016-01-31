@@ -23,6 +23,12 @@
         [{/if}]
       [{/foreach}]
     </div>
+    [{if $oView->getSliderSetting("show_arrows")}]
+      [{$oView->getSliderArrowCode($oView->getSliderSetting("arrow_type"))}]
+    [{/if}]
+    [{if $oView->getSliderSetting("show_bullets")}]
+      [{$oView->getSliderBulletCode($oView->getSliderSetting("bullet_type"))}]
+    [{/if}]
   </div>
 
   [{capture assign="pageScript"}]
@@ -34,7 +40,32 @@
         $PlayOrientation: [{if $oView->getSliderSetting("direction")=="horizontal"}]1[{else}]2[{/if}],
         $Idle: [{$oView->getSliderSetting("idle")}],
         $LazyLoading: 1,
-        }
+        [{if $oView->getSliderSetting("show_arrows")}]
+          $ArrowNavigatorOptions: {
+            $Class: $JssorArrowNavigator$,
+            $ChanceToShow: 2, //[Required] 0 Never, 1 Mouse Over, 2 Always
+            $AutoCenter: 2,
+            $Scale: false,
+          },
+        [{/if}]
+        [{if $oView->getSliderSetting("show_bullets")}]
+          $BulletNavigatorOptions: {
+            $Class: $JssorBulletNavigator$,
+            $ChanceToShow: 2, //[Required] 0 Never, 1 Mouse Over, 2 Always
+            $AutoCenter: 1,
+            $SpacingX: 10,
+            $SpacingY: 10,
+            $Orientation: 1,
+            $Scale: false
+          },
+        [{/if}]
+        $SlideshowOptions: {                                //Options which specifies enable slideshow or not
+          $Class: $JssorSlideshowRunner$,                 //Class to create instance of slideshow
+                $Transitions: _SlideshowTransitions,            //Transitions to play slide, see jssor slideshow transition builder
+                $TransitionsOrder: 1,                           //The way to choose transition to play slide, 1 Sequence, 0 Random
+                $ShowLink: 2,                                   //0 After Slideshow, 2 Always
+                $ContentMode: false                             //Whether to trait content as slide, otherwise trait an image as slide
+            }
       };
       var jssor_slider = new $JssorSlider$('slider_container', options);
 

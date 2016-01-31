@@ -17,6 +17,6 @@
     "tests"
   ],
   "dependencies": {
-    "jssor-slider": "jssor#~20.0.0"
+    "jssor-slider": "marten-seemann/slider#master"
   }
 }
