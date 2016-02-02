@@ -12,15 +12,15 @@
 
 
 [{if $oBanners|@count}]
-  <div id="slider_container" style="position: relative; top: 0px; left: 0px; width: [{$slider_width}]px; height: [{$slider_height}]px;">
+  <div id="slider-container" style="position: relative; top: 0px; left: 0px; width: [{$slider_width}]px; height: [{$slider_height}]px;">
     <div data-u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: [{$slider_width}]px; height: [{$slider_height}]px;">
       [{foreach from=$oBanners item=oBanner name=promoslider}]
         [{assign var=oArticle value=$oBanner->getBannerArticle() }]
-        [{assign var=sBannerPictureUrl value=$oBanner->getBannerPictureUrl() }]
+        [{assign var=sBannerPictureUrl value=$oBanner->getBannerPictureUrl('desktop')}]
         [{assign var=sBannerLink value=$oBanner->getBannerLink() }]
         [{if $sBannerPictureUrl}]
           <div>
-            <img data-u="image" alt="" data-src2="[{$sBannerPictureUrl}]"/>
+            <img data-u="image" alt="" data-src2="" data-src-xs="[{$oBanner->getBannerPictureUrl('phone')}]" data-src-sm="[{$oBanner->getBannerPictureUrl('tablet')}]" data-src-md="[{$sBannerPictureUrl}]" />
             [{if $oArticle}]
               <h6 style="font-size: 36px; position: absolute; top: 18px; left: 100px; margin: 0; font-weight: 400; box-shadow: 0px 4px 16px -6px black; padding: 10px 40px 10px 40px; color: #ffffff; background:#000000; border-radius: 10px; white-space: nowrap;">
                 [{if $sBannerLink }]<a href="[{ $sBannerLink }]" style="text-shadow: 0px 0px 20px white; font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif; color: white; ">[{/if}]
@@ -45,6 +45,19 @@
 
   [{capture assign="pageScript"}]
     jQuery(document).ready(function ($) {
+
+      $("#slider-container").find("img").each(function() {
+        if(Modernizr.mq("only screen and (max-width: 767px)")) {
+          $(this).attr("data-src2", $(this).data("src-xs"));
+        }
+        else if(Modernizr.mq("only screen and (max-width: 991px)")) {
+          $(this).attr("data-src2", $(this).data("src-sm"));
+        }
+        else {
+          $(this).attr("data-src2", $(this).data("src-md"));
+        }
+      });
+
       var options = {
         $AutoPlay: [{$oView->getSliderSetting("autostart")}],
         $AutoPlaySteps: [{if $oView->getSliderSetting("direction")=="forward"}]1[{else}]-1[{/if}],
@@ -57,7 +70,7 @@
             $Class: $JssorArrowNavigator$,
             $ChanceToShow: 2, //[Required] 0 Never, 1 Mouse Over, 2 Always
             $AutoCenter: 2,
-            $Scale: false,
+            $Scale: true,
           },
         [{/if}]
         [{if $oView->getSliderSetting("show_bullets")}]
@@ -68,7 +81,7 @@
             $SpacingX: 10,
             $SpacingY: 10,
             $Orientation: 1,
-            $Scale: false
+            $Scale: true
           },
         [{/if}]
         [{if $oView->getSliderSetting("transitions_code")}]
@@ -80,11 +93,11 @@
           },
         [{/if}]
       };
-      var jssor_slider = new $JssorSlider$('slider_container', options);
+      var jssor_slider = new $JssorSlider$('slider-container', options);
 
       //responsive code begin
       function ScaleSlider() {
-        var parentWidth = $('#slider_container').parent().width();
+        var parentWidth = $('#slider-container').parent().width();
         if (parentWidth) {
           jssor_slider.$ScaleWidth(parentWidth);
         }

@@ -39,6 +39,9 @@ $aModule = array(
       array('group' => 'slider_navigation', 'name' => 'slider_bullet_type', 'type' => 'str', 'value' => '17', 'position' => 112),
       array('group' => 'slider_transitions', 'name' => 'slider_transitions_code', 'type' => 'str', 'value' => '', 'position' => 201),
       array('group' => 'slider_transitions', 'name' => 'slider_transitions_random', 'type' => 'bool', 'value' => false, 'position' => 210),
+      array('group' => 'slider_responsive', 'name' => 'sPromoBannersizePhone', 'type' => 'str',  'value' => '767*767', 'position' => 501),
+      array('group' => 'slider_responsive', 'name' => 'sPromoBannersizeTablet', 'type' => 'str',  'value' => '991*991', 'position' => 502),
+      array('group' => 'slider_responsive', 'name' => 'sPromoBannersize', 'type' => 'str',  'value' => '1200*1200', 'position' => 503),
     ),
     'templates'    => array(
         'slider.tpl' => 'responsive_slider/views/blocks/slider.tpl',

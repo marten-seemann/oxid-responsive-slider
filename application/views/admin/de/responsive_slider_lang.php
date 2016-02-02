@@ -7,6 +7,7 @@ $aLang = array(
   'SHOP_MODULE_GROUP_slider_display' => 'Anzeige',
   'SHOP_MODULE_GROUP_slider_navigation' => 'Navigation',
   'SHOP_MODULE_GROUP_slider_transitions' => 'Überblend-Effekte',
+  'SHOP_MODULE_GROUP_slider_responsive' => 'Responsive Einstellungen',
   'SHOP_MODULE_slider_autostart' => 'Auto-Start',
   'SHOP_MODULE_slider_idle' => 'Slideshow Delay, in ms',
   'SHOP_MODULE_slider_duration' => 'Dauer des Überblendungs-Effekts, in ms',
@@ -25,4 +26,7 @@ $aLang = array(
   'SHOP_MODULE_slider_transitions_code' => 'Überblend-Effekt-Code',
   'HELP_SHOP_MODULE_slider_transitions_code' => 'Den Code für Übergänge können Sie <a href="http://www.jssor.com/development/tool-slideshow-transition-viewer.html" target="_blank">hier</a> generieren. Bitte dann den kompletten Inhalt des <em>Transition Code</em>-Feldes hier hin kopieren.<br>Um mehrere Effekte zu verwenden, können Sie auf diese Weise mehrere <em>Transition Code</em>s generieren und, durch <em>,</em> voneinander abgetrennt, hier einfügen.',
   'SHOP_MODULE_slider_transitions_random' => 'Überblend-Effekte in zufälliger Reihenfolge anzeigen',
+  'SHOP_MODULE_sPromoBannersizePhone' => 'Bildgröße für Smartphones',
+  'SHOP_MODULE_sPromoBannersizeTablet' => 'Bildgröße für Tablets',
+  'SHOP_MODULE_sPromoBannersize' => 'Bildgröße für große Bildschirme',
 );
