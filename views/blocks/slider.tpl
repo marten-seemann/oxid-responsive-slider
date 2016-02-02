@@ -6,7 +6,7 @@
 
 [{oxscript include="$moduleUrl/bower_components/jssor-slider/js/jssor.slider.debug.js"}]
 
-[{assign var="slider_width" value="600"}]
+[{assign var="slider_width" value="1200"}]
 [{assign var="slider_height" value=$oView->getSliderHeight($slider_width)}]
 
 
@@ -22,12 +22,12 @@
           <div>
             <img data-u="image" alt="" data-src2="[{$sBannerPictureUrl}]"/>
             [{if $oArticle}]
-              <h6 style="font-size: 18px; position: absolute; top: 9px; left: 50px; margin: 0; font-weight: 400; box-shadow: 0px 2px 8px -2px black; padding: 5px 20px 5px 20px; color: #ffffff; background:#000000; border-radius:5px; white-space: nowrap;">
-                [{if $sBannerLink }]<a href="[{ $sBannerLink }]" style="text-shadow: 0px 0px 10px white; font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif; color: white; ">[{/if}]
+              <h6 style="font-size: 36px; position: absolute; top: 18px; left: 100px; margin: 0; font-weight: 400; box-shadow: 0px 4px 16px -6px black; padding: 10px 40px 10px 40px; color: #ffffff; background:#000000; border-radius: 10px; white-space: nowrap;">
+                [{if $sBannerLink }]<a href="[{ $sBannerLink }]" style="text-shadow: 0px 0px 20px white; font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif; color: white; ">[{/if}]
                 [{ $oArticle->oxarticles__oxtitle->value }]
                 [{if $sBannerLink }]</a>[{/if}]
               </h6>
-              <div style="font-size: 13px; position: absolute; top: 36px; left: 75px; font-weight: 400; box-shadow: 0px 2px 8px -2px black; padding: 2px 13px 2px 13px; color: #ffffff; background: #ff7700; border-radius: 5px; white-space: nowrap;">
+              <div style="font-size: 22px; position: absolute; top: 78px; left: 150px; font-weight: 400; box-shadow: 0px 4px 16px -4px black; padding: 4px 26px 4px 26px; color: #ffffff; background: #ff7700; border-radius: 10px; white-space: nowrap;">
                 [{ $oArticle->getFPrice() }] [{ $currency->sign}]
               </div>
             [{/if}]
