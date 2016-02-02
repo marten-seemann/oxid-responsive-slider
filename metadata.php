@@ -20,8 +20,8 @@ $aModule = array(
     'author'       => 'Marten Seemann',
     'url'          => 'http://shop.oxid-responsive.com',
     'blocks' => array(
-        array('template' => 'layout/header.tpl', 'block' => 'promoslider', 'file' => '/views/blocks/slider_loader.tpl'),
-        array('template' => 'layout/page.tpl', 'block' => 'promoslider', 'file' => '/views/blocks/slider_loader.tpl'),
+        array('template' => 'layout/header.tpl', 'block' => 'indexslider', 'file' => '/views/blocks/slider_loader.tpl'),
+        array('template' => 'layout/page.tpl', 'block' => 'indexslider', 'file' => '/views/blocks/slider_loader.tpl'),
     ),
     'extend'       => array(
         'start' => 'responsive_slider/controllers/start_ext',
