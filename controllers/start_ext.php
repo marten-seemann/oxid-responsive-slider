@@ -9,12 +9,14 @@ class start_ext extends start_ext_parent {
      parent::__construct();
   }
 
-  public function getSliderSetting($sVar) {
+  public function getSliderSetting($sVar, $asBool = false) {
     $cfg = $this->getConfig();
     $ret = $cfg->getConfigParam("slider_".$sVar);
-    if(gettype($ret) == "boolean") {
-      if($ret == 1) return "true";
-      else return "false";
+    if(!$asBool) {
+      if(gettype($ret) == "boolean") {
+        if($ret == 1) return "true";
+        else return "false";
+      }
     }
     return $ret;
   }

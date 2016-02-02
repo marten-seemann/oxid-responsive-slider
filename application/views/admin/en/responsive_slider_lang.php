@@ -26,6 +26,8 @@ $aLang = array(
   'SHOP_MODULE_slider_transitions_code' => 'code for the transition effect',
   'HELP_SHOP_MODULE_slider_transitions_code' => 'The code for the transition effects can be obtained <a href="http://www.jssor.com/development/tool-slideshow-transition-viewer.html" target="_blank">hier</a>. Please copy the complete content of the input field <em>Transition Code</em> here.<br>To use multiple transitions, generate the <em>Transition Code</em>s as described and paste them here, separated by em>,</em>.',
   'SHOP_MODULE_slider_transitions_random' => 'show transition effects in random order',
+  'SHOP_MODULE_slider_show_on_smartphone' => 'show on smartphones',
+  'SHOP_MODULE_slider_show_on_tablet' => 'show on tablets',
   'SHOP_MODULE_sPromoBannersizePhone' => 'image size for smartphones',
   'SHOP_MODULE_sPromoBannersizeTablet' => 'image size for tablets',
   'SHOP_MODULE_sPromoBannersize' => 'image size for large displays',

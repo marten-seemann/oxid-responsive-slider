@@ -20,8 +20,8 @@ $aModule = array(
     'author'       => 'Marten Seemann',
     'url'          => 'http://shop.oxid-responsive.com',
     'blocks' => array(
-        array('template' => 'layout/header.tpl', 'block' => 'promoslider', 'file' => '/views/blocks/slider.tpl'),
-        array('template' => 'layout/page.tpl', 'block' => 'promoslider', 'file' => '/views/blocks/slider.tpl'),
+        array('template' => 'layout/header.tpl', 'block' => 'promoslider', 'file' => '/views/blocks/slider_loader.tpl'),
+        array('template' => 'layout/page.tpl', 'block' => 'promoslider', 'file' => '/views/blocks/slider_loader.tpl'),
     ),
     'extend'       => array(
         'start' => 'responsive_slider/controllers/start_ext',
@@ -39,9 +39,11 @@ $aModule = array(
       array('group' => 'slider_navigation', 'name' => 'slider_bullet_type', 'type' => 'str', 'value' => '17', 'position' => 112),
       array('group' => 'slider_transitions', 'name' => 'slider_transitions_code', 'type' => 'str', 'value' => '', 'position' => 201),
       array('group' => 'slider_transitions', 'name' => 'slider_transitions_random', 'type' => 'bool', 'value' => false, 'position' => 210),
-      array('group' => 'slider_responsive', 'name' => 'sPromoBannersizePhone', 'type' => 'str',  'value' => '767*767', 'position' => 501),
-      array('group' => 'slider_responsive', 'name' => 'sPromoBannersizeTablet', 'type' => 'str',  'value' => '991*991', 'position' => 502),
-      array('group' => 'slider_responsive', 'name' => 'sPromoBannersize', 'type' => 'str',  'value' => '1200*1200', 'position' => 503),
+      array('group' => 'slider_responsive', 'name' => 'slider_show_on_smartphone', 'type' => 'bool',  'value' => true, 'position' => 501),
+      array('group' => 'slider_responsive', 'name' => 'slider_show_on_tablet', 'type' => 'bool',  'value' => true, 'position' => 502),
+      array('group' => 'slider_responsive', 'name' => 'sPromoBannersizePhone', 'type' => 'str',  'value' => '767*767', 'position' => 511),
+      array('group' => 'slider_responsive', 'name' => 'sPromoBannersizeTablet', 'type' => 'str',  'value' => '991*991', 'position' => 512),
+      array('group' => 'slider_responsive', 'name' => 'sPromoBannersize', 'type' => 'str',  'value' => '1200*1200', 'position' => 513),
     ),
     'templates'    => array(
         'slider.tpl' => 'responsive_slider/views/blocks/slider.tpl',

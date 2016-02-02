@@ -44,8 +44,7 @@
   </div>
 
   [{capture assign="pageScript"}]
-    jQuery(document).ready(function ($) {
-
+    function initSlider() {
       $("#slider-container").find("img").each(function() {
         if(Modernizr.mq("only screen and (max-width: 767px)")) {
           $(this).attr("data-src2", $(this).data("src-xs"));
@@ -95,22 +94,17 @@
       };
       var jssor_slider = new $JssorSlider$('slider-container', options);
 
-      //responsive code begin
       function ScaleSlider() {
         var parentWidth = $('#slider-container').parent().width();
-        if (parentWidth) {
-          jssor_slider.$ScaleWidth(parentWidth);
-        }
-        else {
-          window.setTimeout(ScaleSlider, 30);
-        }
+        if (parentWidth) { jssor_slider.$ScaleWidth(parentWidth); }
+        else { window.setTimeout(ScaleSlider, 30); }
       }
       ScaleSlider();
 
       $(window).bind("load", ScaleSlider);
       $(window).bind("resize", ScaleSlider);
       $(window).bind("orientationchange", ScaleSlider);
-    });
+    }
   [{/capture}]
   [{oxscript add=$pageScript}]
 [{/if }]
