@@ -71,13 +71,14 @@
             $Scale: false
           },
         [{/if}]
-        $SlideshowOptions: {                                //Options which specifies enable slideshow or not
-          $Class: $JssorSlideshowRunner$,                 //Class to create instance of slideshow
-                $Transitions: _SlideshowTransitions,            //Transitions to play slide, see jssor slideshow transition builder
-                $TransitionsOrder: 1,                           //The way to choose transition to play slide, 1 Sequence, 0 Random
-                $ShowLink: 2,                                   //0 After Slideshow, 2 Always
-                $ContentMode: false                             //Whether to trait content as slide, otherwise trait an image as slide
-            }
+        [{if $oView->getSliderSetting("transitions_code")}]
+          $SlideshowOptions: {
+            $Class: $JssorSlideshowRunner$,
+            $Transitions: [[{$oView->getSliderSetting("transitions_code")}]],
+            $TransitionsOrder: [{if $oView->getSliderSetting("transistions_random")}]0[{else}]1[{/if}],
+            $ShowLink: 2
+          },
+        [{/if}]
       };
       var jssor_slider = new $JssorSlider$('slider_container', options);
 

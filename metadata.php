@@ -36,7 +36,9 @@ $aModule = array(
       array('group' => 'slider_navigation', 'name' => 'slider_show_arrows', 'type' => 'bool', 'value' => true, 'position' => 101),
       array('group' => 'slider_navigation', 'name' => 'slider_arrow_type', 'type' => 'str', 'value' => '2', 'position' => 102),
       array('group' => 'slider_navigation', 'name' => 'slider_show_bullets', 'type' => 'bool', 'value' => true, 'position' => 111),
-      array('group' => 'slider_navigation', 'name' => 'slider_bullet_type', 'type' => 'str', 'value' => '16', 'position' => 112),
+      array('group' => 'slider_navigation', 'name' => 'slider_bullet_type', 'type' => 'str', 'value' => '17', 'position' => 112),
+      array('group' => 'slider_transitions', 'name' => 'slider_transitions_code', 'type' => 'str', 'value' => '', 'position' => 201),
+      array('group' => 'slider_transitions', 'name' => 'slider_transitions_random', 'type' => 'bool', 'value' => false, 'position' => 210),
     ),
     'templates'    => array(
         'slider.tpl' => 'responsive_slider/views/blocks/slider.tpl',
