@@ -1,11 +1,11 @@
-<div id="slider"></div>
+<div id="indexslider"></div>
 
 [{capture assign="code" name="code"}]
   [{include file="slider.tpl"}]
 [{/capture}]
 
 [{capture assign="initcode" name="initcode"}]
-  $("#slider").append(code);
+  $("#indexslider").append(code);
   jQuery(document).ready(function($) { initSlider(); });
 [{/capture}]
 
