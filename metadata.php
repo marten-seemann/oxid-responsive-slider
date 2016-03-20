@@ -16,7 +16,7 @@ $aModule = array(
         'de' => 'bindet den Jssor in Ihren OXID-Shop ein'
         ),
     // 'thumbnail'    => 'picture.png',
-    'version'      => '0.9',
+    'version'      => '1.0',
     'author'       => 'Marten Seemann',
     'url'          => 'http://shop.oxid-responsive.com',
     'blocks' => array(
