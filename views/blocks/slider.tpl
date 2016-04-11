@@ -20,6 +20,7 @@
         [{assign var=sBannerLink value=$oBanner->getBannerLink() }]
         [{if $sBannerPictureUrl}]
           <div>
+            [{if $oView->getSliderSetting('link_whole_slide', true) && $sBannerLink }]<a href="[{ $sBannerLink }]" alt="[{ $oArticle->oxarticles__oxtitle->value }]">[{/if}]
             <img data-u="image" alt="" data-src2="" data-src-xs="[{$oBanner->getBannerPictureUrl('phone')}]" data-src-sm="[{$oBanner->getBannerPictureUrl('tablet')}]" data-src-md="[{$sBannerPictureUrl}]" />
             [{if $oArticle}]
               <h6 style="font-size: 36px; position: absolute; top: 18px; left: 100px; margin: 0; font-weight: 400; box-shadow: 0px 4px 16px -6px black; padding: 10px 40px 10px 40px; color: #ffffff; background:#000000; border-radius: 10px; white-space: nowrap;">
@@ -30,6 +31,7 @@
               <div style="font-size: 22px; position: absolute; top: 78px; left: 150px; font-weight: 400; box-shadow: 0px 4px 16px -4px black; padding: 4px 26px 4px 26px; color: #ffffff; background: #ff7700; border-radius: 10px; white-space: nowrap;">
                 [{ $oArticle->getFPrice() }] [{ $currency->sign}]
               </div>
+              [{if $oView->getSliderSetting('link_whole_slide', true) && $sBannerLink }]</a>[{/if}]
             [{/if}]
           </div>
         [{/if}]

@@ -44,6 +44,7 @@ $aModule = array(
       array('group' => 'slider_responsive', 'name' => 'sPromoBannersizePhone', 'type' => 'str',  'value' => '767*767', 'position' => 511),
       array('group' => 'slider_responsive', 'name' => 'sPromoBannersizeTablet', 'type' => 'str',  'value' => '991*991', 'position' => 512),
       array('group' => 'slider_responsive', 'name' => 'sPromoBannersize', 'type' => 'str',  'value' => '1200*1200', 'position' => 513),
+      array('group' => 'slider_links', 'name' => 'slider_link_whole_slide', 'type' => 'bool',  'value' => false, 'position' => 601),
     ),
     'templates'    => array(
         'slider.tpl' => 'responsive_slider/views/blocks/slider.tpl',

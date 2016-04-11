@@ -8,6 +8,7 @@ $aLang = array(
   'SHOP_MODULE_GROUP_slider_navigation' => 'Navigation',
   'SHOP_MODULE_GROUP_slider_transitions' => 'Überblend-Effekte',
   'SHOP_MODULE_GROUP_slider_responsive' => 'Responsive Einstellungen',
+  'SHOP_MODULE_GROUP_slider_links' => 'Verlinkung',
   'SHOP_MODULE_slider_autostart' => 'Auto-Start',
   'SHOP_MODULE_slider_idle' => 'Slideshow Delay, in ms',
   'SHOP_MODULE_slider_duration' => 'Dauer des Überblendungs-Effekts, in ms',
@@ -31,4 +32,6 @@ $aLang = array(
   'SHOP_MODULE_sPromoBannersizePhone' => 'Bildgröße für Smartphones',
   'SHOP_MODULE_sPromoBannersizeTablet' => 'Bildgröße für Tablets',
   'SHOP_MODULE_sPromoBannersize' => 'Bildgröße für große Bildschirme',
+  'SHOP_MODULE_slider_link_whole_slide' => 'gesamte Slide verlinken',
+  'HELP_SHOP_MODULE_slider_link_whole_slide' => 'Normalerweise ist nur der Titel verlinkt. Wenn aktiviert, wird die gesamte Slide verlinkt.',
 );

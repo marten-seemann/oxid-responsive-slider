@@ -8,6 +8,7 @@ $aLang = array(
   'SHOP_MODULE_GROUP_slider_navigation' => 'navigation',
   'SHOP_MODULE_GROUP_slider_transitions' => 'transition effects',
   'SHOP_MODULE_GROUP_slider_responsive' => 'responsive behavior',
+  'SHOP_MODULE_GROUP_slider_links' => 'links',
   'SHOP_MODULE_slider_autostart' => 'automatically start slideshow',
   'SHOP_MODULE_slider_idle' => 'slideshow delay, in ms',
   'SHOP_MODULE_slider_duration' => 'duration of the transitions, in ms',
@@ -31,4 +32,6 @@ $aLang = array(
   'SHOP_MODULE_sPromoBannersizePhone' => 'image size for smartphones',
   'SHOP_MODULE_sPromoBannersizeTablet' => 'image size for tablets',
   'SHOP_MODULE_sPromoBannersize' => 'image size for large displays',
+  'SHOP_MODULE_slider_link_whole_slide' => 'use whole slide as a link',
+  'HELP_SHOP_MODULE_slider_link_whole_slide' => 'Normally only the title acts as a link. If activated, the whole slide is a link.',
 );
