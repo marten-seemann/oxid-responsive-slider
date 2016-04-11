@@ -35,10 +35,10 @@
         [{/if}]
       [{/foreach}]
     </div>
-    [{if $oView->getSliderSetting("show_arrows")}]
+    [{if $oView->getSliderSetting("show_arrows", true)}]
       [{$oView->getSliderArrowCode($oView->getSliderSetting("arrow_type"))}]
     [{/if}]
-    [{if $oView->getSliderSetting("show_bullets")}]
+    [{if $oView->getSliderSetting("show_bullets", true)}]
       [{$oView->getSliderBulletCode($oView->getSliderSetting("bullet_type"))}]
     [{/if}]
   </div>
@@ -64,7 +64,7 @@
         $PlayOrientation: [{if $oView->getSliderSetting("orientation")=="horizontal"}]1[{else}]2[{/if}],
         $Idle: [{$oView->getSliderSetting("idle")}],
         $LazyLoading: 1,
-        [{if $oView->getSliderSetting("show_arrows")}]
+        [{if $oView->getSliderSetting("show_arrows", true)}]
           $ArrowNavigatorOptions: {
             $Class: $JssorArrowNavigator$,
             $ChanceToShow: 2, //[Required] 0 Never, 1 Mouse Over, 2 Always
@@ -72,7 +72,7 @@
             $Scale: true,
           },
         [{/if}]
-        [{if $oView->getSliderSetting("show_bullets")}]
+        [{if $oView->getSliderSetting("show_bullets", true)}]
           $BulletNavigatorOptions: {
             $Class: $JssorBulletNavigator$,
             $ChanceToShow: 2, //[Required] 0 Never, 1 Mouse Over, 2 Always
@@ -83,7 +83,7 @@
             $Scale: true
           },
         [{/if}]
-        [{if $oView->getSliderSetting("transitions_code")}]
+        [{if $oView->getSliderSetting("transitions_code", true)}]
           $SlideshowOptions: {
             $Class: $JssorSlideshowRunner$,
             $Transitions: [[{$oView->getSliderSetting("transitions_code")}]],
