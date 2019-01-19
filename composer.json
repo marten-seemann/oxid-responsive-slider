@@ -1,0 +1,21 @@
+{
+  "name": "seemannit/oxid-responsive-slider",
+  "description": "Responsive Slider for OXID eShop.",
+  "type": "oxideshop-module",
+  "keywords": ["oxid", "modules", "eShop", "slider", "responsive"],
+  "homepage": "https://www.oxid-responsive.com",
+  "license": [ "MIT" ],
+  "require": {
+    "php": ">=7.0"
+  },
+  "extra": {
+    "oxideshop": {
+      "target-directory": "responsiveslider"
+    }
+  },
+  "autoload": {
+    "psr-4": {
+        "SeemannIT\\ResponsiveSliderModule\\": "../../../source/modules/seemannit/responsiveslider"
+    }
+  }
+}

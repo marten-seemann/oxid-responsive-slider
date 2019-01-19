@@ -1,11 +1,13 @@
 <?php
-class start_ext extends start_ext_parent {
+namespace SeemannIT\ResponsiveSliderModule\Application\Controller;
+
+class StartController extends StartController_parent {
   protected $jssorDir;
   protected $jssorImgDirUrl;
 
   public function __construct() {
      $this->jssorDir = dirname(__FILE__)."/../bower_components/jssor-slider/";
-     $this->jssorImgDirUrl = $this->getViewConfig()->getModuleUrl("responsive_slider")."bower_components/jssor-slider/img/";
+     $this->jssorImgDirUrl = $this->getViewConfig()->getModuleUrl("responsiveslider")."bower_components/jssor-slider/img/";
      parent::__construct();
   }
 

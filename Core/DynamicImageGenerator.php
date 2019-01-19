@@ -1,5 +1,7 @@
 <?php
-class sliderdynimggenerator extends oxdynimggenerator {
+namespace SeemannIT\ResponsiveSliderModule\Core;
+
+class DynamicImageGenerator extends DynamicImageGenerator_parent {
   /**
   * set path pattern for banner images
   *

@@ -5,13 +5,13 @@
 [{/capture}]
 
 [{capture assign="initcode" name="initcode"}]
+  var code=[{$code|@json_encode}];
   $("#indexslider").append(code);
   jQuery(document).ready(function($) { initSlider(); });
 [{/capture}]
 
 
 [{capture assign="jscode" name="jscode"}]
-  var code=[{$code|@json_encode}];
   [{if $oView->getSliderSetting("show_on_smartphone", true)}]
     if(Modernizr.mq("only screen and (max-width: 767px)")) { [{$initcode}] }
   [{/if}]
