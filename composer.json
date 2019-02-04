@@ -10,7 +10,7 @@
   },
   "extra": {
     "oxideshop": {
-      "target-directory": "responsiveslider"
+      "target-directory": "seemannit/responsiveslider"
     }
   },
   "autoload": {
