@@ -1,7 +1,7 @@
 [{assign var=oBanners value=$oView->getBanners() }]
 [{assign var="currency" value=$oView->getActCurrency()}]
 
-[{assign var="moduleUrl" value=$oViewConf->getModuleUrl("responsive_slider")}]
+[{assign var="moduleUrl" value=$oViewConf->getModuleUrl("responsiveslider")}]
 
 
 [{oxscript include="$moduleUrl/bower_components/jssor-slider/js/jssor.slider.debug.js"}]
