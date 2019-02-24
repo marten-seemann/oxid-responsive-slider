@@ -36,7 +36,7 @@ $aModule = [
     'extend'       => [
         \OxidEsales\Eshop\Application\Controller\StartController::class => \SeemannIT\ResponsiveSliderModule\Application\Controller\StartController::class,
         \OxidEsales\Eshop\Core\DynamicImageGenerator::class => \SeemannIT\ResponsiveSliderModule\Core\DynamicImageGenerator::class,
-        \OxidEsales\Eshop\Application\Model\Actions::class => \SeemannIT\ResponsiveSliderModule\Model\Actions::class,
+        \OxidEsales\Eshop\Application\Model\Actions::class => \SeemannIT\ResponsiveSliderModule\Application\Model\Actions::class,
     ],
     'settings'     => [
         [

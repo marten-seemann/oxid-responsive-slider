@@ -1,5 +1,5 @@
 <?php
-namespace SeemannIT\ResponsiveSliderModule\Model;
+namespace SeemannIT\ResponsiveSliderModule\Application\Model;
 
 class Actions extends Actions_parent {
   /**
