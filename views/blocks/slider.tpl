@@ -3,8 +3,11 @@
 
 [{assign var="moduleUrl" value=$oViewConf->getModuleUrl("responsiveslider")}]
 
-
-[{oxscript include="$moduleUrl/bower_components/jssor-slider/js/jssor.slider.debug.js"}]
+[{if $oxcmp_shop->oxshops__oxproductive->value}]
+  [{oxscript include="$moduleUrl/bower_components/jssor-slider/js/jssor.slider.mini.js"}]
+[{else}]
+  [{oxscript include="$moduleUrl/bower_components/jssor-slider/js/jssor.slider.debug.js"}]
+[{/if}]
 
 [{assign var="slider_width" value="1200"}]
 [{assign var="slider_height" value=$oView->getSliderHeight($slider_width)}]
