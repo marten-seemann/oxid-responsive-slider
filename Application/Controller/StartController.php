@@ -6,7 +6,7 @@ class StartController extends StartController_parent {
   protected $jssorImgDirUrl;
 
   public function __construct() {
-     $this->jssorDir = dirname(__FILE__)."/../bower_components/jssor-slider/";
+     $this->jssorDir = $this->getViewConfig()->getModulePath("responsiveslider")."/bower_components/jssor-slider/";
      $this->jssorImgDirUrl = $this->getViewConfig()->getModuleUrl("responsiveslider")."bower_components/jssor-slider/img/";
      parent::__construct();
   }
