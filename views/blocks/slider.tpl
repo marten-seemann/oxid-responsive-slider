@@ -25,6 +25,12 @@
           <div>
             [{if $oView->getSliderSetting('link_whole_slide', true) && $sBannerLink }]<a href="[{ $sBannerLink }]" alt="[{ $oArticle->oxarticles__oxtitle->value }]">[{/if}]
             <img data-u="image" alt="" data-src2="" data-src-xs="[{$oBanner->getBannerPictureUrl('phone')}]" data-src-sm="[{$oBanner->getBannerPictureUrl('tablet')}]" data-src-md="[{$sBannerPictureUrl}]" />
+            [{* if there's a CMS snippet with the same OXID as the banner, show it *}]
+            [{oxifcontent ident=$oBanner->oxactions__oxid->value object=oCont}]
+              <div class="slider-caption" style="position: absolute; top: 0; bottom: 0; left: 0; right: 0;">
+                [{$oCont->oxcontents__oxcontent->value}]
+              </div>
+            [{/oxifcontent}]
             [{if $oArticle}]
               <h6 style="font-size: 36px; position: absolute; top: 18px; left: 100px; margin: 0; font-weight: 400; box-shadow: 0px 4px 16px -6px black; padding: 10px 40px 10px 40px; color: #ffffff; background:#000000; border-radius: 10px; white-space: nowrap;">
                 [{if $sBannerLink }]<a href="[{ $sBannerLink }]" style="text-shadow: 0px 0px 20px white; font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif; color: white; ">[{/if}]
