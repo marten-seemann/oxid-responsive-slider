@@ -34,4 +34,6 @@ $aLang = array(
   'SHOP_MODULE_sPromoBannersize' => 'Bildgröße für große Bildschirme',
   'SHOP_MODULE_slider_link_whole_slide' => 'gesamte Slide verlinken',
   'HELP_SHOP_MODULE_slider_link_whole_slide' => 'Normalerweise ist nur der Titel verlinkt. Wenn aktiviert, wird die gesamte Slide verlinkt.',
+  'BANNER_OXID' => 'OXID',
+  'HELP_BANNER_OXID' => 'Wenn Sie ein CMS-Snippet mit derselben OXID anlegen, wird dieses zusammen mit dem Banner angezeigt. Sie können so eigene Beschriftungen für die Banner einrichten.',
 );

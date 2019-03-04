@@ -34,4 +34,6 @@ $aLang = array(
   'SHOP_MODULE_sPromoBannersize' => 'image size for large displays',
   'SHOP_MODULE_slider_link_whole_slide' => 'use whole slide as a link',
   'HELP_SHOP_MODULE_slider_link_whole_slide' => 'Normally only the title acts as a link. If activated, the whole slide is a link.',
+  'BANNER_OXID' => 'OXID',
+  'HELP_BANNER_OXID' => 'If you create a CMS snippet with the same OXID, it will be shown on top of the slide. ',
 );

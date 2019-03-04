@@ -32,6 +32,11 @@ $aModule = [
             'block' => 'indexslider',
             'file' => '/views/blocks/slider_loader.tpl'
         ],
+        [
+            'template' => 'actions_main.tpl',
+            'block' => 'admin_actions_main_form',
+            'file' => '/views/blocks/admin/actions_main.tpl',
+        ],
     ],
     'extend'       => [
         \OxidEsales\Eshop\Application\Controller\StartController::class => \SeemannIT\ResponsiveSliderModule\Application\Controller\StartController::class,
