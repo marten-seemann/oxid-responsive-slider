@@ -18,7 +18,7 @@ $aModule = [
         'en' => 'implements the Jssor into your OXID shop',
         'de' => 'bindet den Jssor in Ihren OXID-Shop ein'
     ],
-    'version'      => '2.2',
+    'version'      => '2.3',
     'author'       => 'Marten Seemann',
     'url'          => 'https://www.oxid-responsive.com',
     'blocks' => [
